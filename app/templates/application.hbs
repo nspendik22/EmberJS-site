@@ -1,5 +1,41 @@
 {{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
 {{!-- Feel free to remove this! --}}
+<header>
+    <nav>
+        <div class="main">
+            {{#link-to "index"}}<div class="name-placeholder"></div>{{/link-to}}
+            <ul>
+                <li>{{#link-to "about"}}About{{/link-to}}</li>
+                <li>{{#link-to "portfolio"}}Portfolio{{/link-to}}</li>
+                <li>{{#link-to "contact"}}Contact{{/link-to}}</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main-wrapper">
+        <img class="animated rubberBand" src="https://emberjs.com/images/brand/ember_Tomster-Lockup-b368131eb80ecbcbaf2d23fd4cb27295.png" alt="Ember Logo">
+        <h1 class="title">Ember Competency Page</h1>
+    </div>
+</header>
 
 {{outlet}}
+
+
+<footer>
+	<div class="footer-wrapper">
+		<div class="wrapper">
+			<div>
+				<p>© 2020 Nikolas Spendik. All Rights Reserved.</p>
+			</div>
+				<div>
+                    <div class="social-icons">
+                        <i class="fab fa-2x fa-linkedin"></i>
+                        <i class="fab fa-2x fa-twitter"></i>
+                        <i class="fab fa-2x fa-instagram"></i>
+                        <i class="fab fa-2x fa-github"></i>
+                    </div>
+				</div>
+			</div>
+	</div>
+</footer>
+{{!--<h1> Hello World </h1> --}}
+{{!-- {{outlet}} --}}
