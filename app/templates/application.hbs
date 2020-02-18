@@ -1,18 +1,15 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{!-- Feel free to remove this! --}}
 <header>
     <nav>
-        <div class="main">
-            {{#link-to "index"}}<div class="name-placeholder"></div>{{/link-to}}
-            <ul>
+        <input type="checkbox" id="css-toggle-menu" name="css-toggle-menu">
+             <ul class="main">
                 <li>{{#link-to "about"}}About{{/link-to}}</li>
                 <li>{{#link-to "portfolio"}}Portfolio{{/link-to}}</li>
                 <li>{{#link-to "contact"}}Contact{{/link-to}}</li>
             </ul>
-        </div>
+        <label for="css-toggle-menu" id="css-toggle-menu"></label>
     </nav>
     <div class="main-wrapper">
-        <img class="animated rubberBand" src="https://emberjs.com/images/brand/ember_Tomster-Lockup-b368131eb80ecbcbaf2d23fd4cb27295.png" alt="Ember Logo">
+        <img class="animated rubberBand" src="{{rootURL}}/assets/images/tomster.png" alt="Ember Logo">
         <h1 class="title">Ember Competency Page</h1>
     </div>
 </header>
@@ -37,5 +34,3 @@
 			</div>
 	</div>
 </footer>
-{{!--<h1> Hello World </h1> --}}
-{{!-- {{outlet}} --}}

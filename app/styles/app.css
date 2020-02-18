@@ -45,7 +45,7 @@ nav {
 .main {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 nav ul {
@@ -53,15 +53,106 @@ nav ul {
     display: inline-flex;
 }
 
+@media (max-width: 768px) {
+    nav {
+        bottom: 0;
+        height: 50px;
+    }
+    nav ul {
+        transform: translateY(100%);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+        transition: all .5s;
+        position: absolute;
+        display: block!important;
+        height: auto!important;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 0px;
+    }
+
+    nav li {
+        flex: none;
+        padding: 30px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        width: 80%;
+        margin: 0 auto!important;
+    }
+
+    nav label {
+        display: block!important;
+    }
+
+    nav input[type="checkbox"]:checked + ul {
+        transform: translateY(-85%);
+        width: 100%;
+        transition: all .5s;
+    }
+
+    .main-wrapper h1 {
+        font-size: 1.5rem!important;
+    }
+
+    .skills-section .wrapper {
+        display: block!important;
+    }
+
+    .skills-section .skill-row {
+        font-size: 2rem!important;
+    }
+
+    .contactForm {
+        min-width: auto!important;
+    }
+
+    .contact-section .contact-container .contactForm .contactNameEmail {
+        flex-direction: column;
+    }
+
+    .contact-section .contact-container .contactForm .contactName, .contact-section .contact-container .contactForm .contactEmail {
+        width: 100%!important;
+    }
+
+    footer .footer-wrapper {
+        padding-bottom: 60px!important;
+    }
+
+    footer .footer-wrapper .wrapper {
+        flex-direction: column;
+    }
+
+}
+
+
 nav ul li {
     margin: 0 20px;
     color: white;
 }
 
+nav label {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    transition: .4s;
+}
 
+nav label:before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0c9";
+    text-align: center;
+}
+
+nav input, nav label {
+    display: none;
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+    font-size: 1.6rem;
+    border-radius: 2px;
+}
 
 nav ul li a::after{
-    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";
+    
     padding-left: 10px;
     opacity: .5;
     font-size: 0.8rem;
@@ -101,12 +192,6 @@ nav ul li a{
         transform: scaleX(0);
         transition: all .3s; 
     } 
-    .skills-section {
-        background-color: #141d22;
-        background-size: cover;
-        color: #fff;
-        padding: 60px 0;
-    }
     .skills-section .wrapper {
         flex-direction: column;
     }
@@ -183,6 +268,13 @@ nav .name-placeholder:before {
 
 .wrapper .about-content {
     width: 50%;
+}
+
+.skills-section {
+    background-color: #141d22;
+    background-size: cover;
+    color: #fff;
+    padding: 60px 0;
 }
 
 .skills-section .wrapper {
